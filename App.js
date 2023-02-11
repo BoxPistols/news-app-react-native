@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar"
 import { StyleSheet, Text, View, Image } from "react-native"
+import { Listitem } from "./assets/components/ListItem"
 
 export default function App() {
   const exampleText =
@@ -7,22 +8,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.containerTitle}>Hello Expo</Text>
-      <View style={styles.itemContainer}>
-        <View style={styles.leftContainer}>
-          <Image
-            style={{ width: 100, height: 100 }}
-            source={{ uri: "https://picsum.photos/id/10/300/300" }}
-          />
-        </View>
-        <View style={styles.rightContainer}>
-          <Text numberOfLines={3} style={styles.rightContainerText}>
-            {exampleText}
-          </Text>
-          <Text numberOfLines={1} style={styles.rightContainerTextSub}>
-            React News
-          </Text>
-        </View>
-      </View>
+      <Listitem />
       <StatusBar style="auto" />
     </View>
   )
@@ -45,20 +31,5 @@ const styles = StyleSheet.create({
 
     height: 100,
     backgroundColor: "red",
-  },
-  leftContainer: { width: 100 },
-  rightContainer: {
-    flex: 1,
-    justifyContent: "space-between",
-    backgroundColor: "#fefefe",
-    padding: 8,
-  },
-  rightContainerText: {
-    fontSize: 16,
-    // padding: (8, 12, 4, 8),
-  },
-  rightContainerTextSub: {
-    fontSize: 14,
-    color: "gray",
   },
 })
