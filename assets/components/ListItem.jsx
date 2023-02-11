@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   rightContainer: {
     flex: 1,
     justifyContent: "space-between",
-    backgroundColor: "#fefefe",
+    backgroundColor: "#fcfcfc",
     padding: 8,
   },
   rightContainerText: {
