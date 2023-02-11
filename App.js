@@ -8,6 +8,22 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.containerTitle}>Hello Expo</Text>
+      <Listitem
+        imageUrl="https://picsum.photos/id/200/300/300"
+        title="最新ニュース。。あああああああああああああああああああああああああああああいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい"
+        author="by the news"
+      />
+      <Listitem
+        imageUrl="https://picsum.photos/id/10/300/300"
+        title={exampleText}
+        author="by the news"
+      />
+      <Listitem />
+      <Listitem
+        imageUrl="https://picsum.photos/id/10/300/300"
+        title={exampleText}
+        author="by the news"
+      />
       <Listitem />
       <StatusBar style="auto" />
     </View>
@@ -24,12 +40,5 @@ const styles = StyleSheet.create({
   containerTitle: {
     color: "orange",
     fontSize: 32,
-  },
-  itemContainer: {
-    display: "flex",
-    flexDirection: "row",
-
-    height: 100,
-    backgroundColor: "red",
   },
 })

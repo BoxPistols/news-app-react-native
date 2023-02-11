@@ -1,23 +1,30 @@
 import { StyleSheet, Text, View, Image } from "react-native"
+/**
+ * @param {
+ *    imageUrl： 画像URL(string)
+ *    title: タイトル(string)
+ *    author:ニュース提供元(stringl
+ * } props
+ * @returns
+ */
 
-export const Listitem = () => {
-  const exampleText =
-    "Ea veniam dolor non incididunt velit amet Lorem quis et voluptate magna. Amet nisi aliquip tempor cupidatat cupidatat et cillum ea ipsum. Est fugiat Lorem elit ipsum consectetur. Nulla officia eu adipisicing sint magna tempor qui aliqua id mollit. Nisi voluptate"
+export const Listitem = ({ imageUrl, title, author }) => {
   return (
     <>
       <View style={styles.itemContainer}>
         <View style={styles.leftContainer}>
           <Image
             style={{ width: 100, height: 100 }}
-            source={{ uri: "https://picsum.photos/id/10/300/300" }}
+            source={{ uri: imageUrl ? `${imageUrl}` : "https://picsum.photos/id/1/300/300" }}
+            // source={{ uri: "https://picsum.photos/id/10/300/300" }}
           />
         </View>
         <View style={styles.rightContainer}>
           <Text numberOfLines={3} style={styles.rightContainerText}>
-            {exampleText}
+            {title ? title : "Duis irure veniam pariatur cupidatat officia mollit Lorem do."}
           </Text>
           <Text numberOfLines={1} style={styles.rightContainerTextSub}>
-            React News
+            {author ? author : "出典不明"}
           </Text>
         </View>
       </View>
@@ -29,9 +36,9 @@ const styles = StyleSheet.create({
   itemContainer: {
     display: "flex",
     flexDirection: "row",
-
     height: 100,
     backgroundColor: "red",
+    marginVertical: 5,
   },
   leftContainer: { width: 100 },
   rightContainer: {
