@@ -8,5 +8,7 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/node_modules": true
-  }
+  },
+  "csscomb.formatOnSave": false,
+  "editor.formatOnSave": true
 }
